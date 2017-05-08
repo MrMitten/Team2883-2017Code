@@ -65,11 +65,11 @@ public:
 			{
 				std::cout << "Center Left Right";
 
-					std::vector<double> arr = table->GetNumberArray("centerX", llvm::ArrayRef<double>());
+					std::vector<double> arr = table->GetNumberArray("centerX", llvm::ArrayRef<double>());// grabs arrays for NetworkTables
 
-					for(unsigned int i = 0; i < arr.size(); i++)
+					for(unsigned int i = 0; i < arr.size(); i++)//for loop to control robot
 					{
-						int a = (arr[0] + arr[1])/2;
+						int a = (arr[0] + arr[1])/2;//used this to find the center of two seperate values.
 							std::cout << arr[0] << "  ";
 							std::cout << arr[1] << "  ";
 							std::cout << a;
@@ -78,7 +78,7 @@ public:
 						if(a > 85)
 						{
 							//myRobot.Drive(0.15*((arr[0] - 80)/80) + .05,-1.0);
-							rotation = 0.25*((a - 85)/73) + .4;
+							rotation = 0.25*((a - 85)/73) + .4;//math to tune speed
 							std::cout << "right";
 						}
 						else if(a < 85)
