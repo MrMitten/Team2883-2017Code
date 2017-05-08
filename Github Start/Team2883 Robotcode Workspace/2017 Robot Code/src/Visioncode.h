@@ -46,13 +46,13 @@ public:
 		//sets multiple camera values as well as setting up the camera server.
 		server.SetSource(cam2);
 		cam1.SetBrightness(0);
-		//cam1.SetResolution(160,160);
+		cam1.SetResolution(160,160);
 		cam1.SetExposureManual(30);
 		cam1.SetExposureHoldCurrent();
 		cam1.SetWhiteBalanceManual(50);
 		cam1.SetWhiteBalanceHoldCurrent();
 		cam2.SetBrightness(0);
-		//cam2.SetResolution(160,160);
+		cam2.SetResolution(160,160);
 		cam2.SetExposureManual(30);
 		cam2.SetExposureHoldCurrent();
 		cam2.SetWhiteBalanceManual(50);
