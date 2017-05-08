@@ -11,9 +11,9 @@
 #include "WPILib.h"
 #include <iostream>
 #include "CANTalon.h"
-#include "Autonomous.h"
-#include "Visioncode.h"
-#include "Controls.h"
+#include "Autonomous.cpp"
+#include "Visioncode.cpp"
+#include "Controls.cpp"
 //all these above are refrences to codes and commands we will be using
 
 //kTriggerbutton is A button
@@ -61,7 +61,6 @@ public:
 	Robot() {
 		myRobot.SetExpiration(0.1);
 		timer.Start();
-		vis.startup();
 		vis.table = NetworkTable::GetTable("GRIP/myContoursReport"); //this is setting up a ref too our vision values
 		Auto = NetworkTable::GetTable("Preferences");
 
